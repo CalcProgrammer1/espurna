@@ -37,3 +37,4 @@
 #include "sensors.h"
 #include "webui.h"
 #include "progmem.h"
+#include "e131.h"

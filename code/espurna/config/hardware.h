@@ -43,21 +43,21 @@
     #define DEVICE                  "ESPURNA_CORE"
 
     // Disable non-core modules
-    #define ALEXA_SUPPORT           0
-    #define API_SUPPORT             0
-    #define BROKER_SUPPORT          0
-    #define DOMOTICZ_SUPPORT        0
+    #define ALEXA_SUPPORT           1
+    #define API_SUPPORT             1
+    #define BROKER_SUPPORT          1
+    #define DOMOTICZ_SUPPORT        1
     #define DEBUG_SERIAL_SUPPORT    0
-    #define DEBUG_TELNET_SUPPORT    0
-    #define DEBUG_WEB_SUPPORT       0
-    #define HOMEASSISTANT_SUPPORT   0
+    #define DEBUG_TELNET_SUPPORT    1
+    #define DEBUG_WEB_SUPPORT       1
+    #define HOMEASSISTANT_SUPPORT   1
     #define I2C_SUPPORT             0
-    #define MQTT_SUPPORT            0
-    #define NTP_SUPPORT             0
-    #define SCHEDULER_SUPPORT       0
+    #define MQTT_SUPPORT            1
+    #define NTP_SUPPORT             1
+    #define SCHEDULER_SUPPORT       1
     #define SENSOR_SUPPORT          0
-    #define THINGSPEAK_SUPPORT      0
-    #define WEB_SUPPORT             0
+    #define THINGSPEAK_SUPPORT      1
+    #define WEB_SUPPORT             1
 
     // Extra light-weight image
     //#define BUTTON_SUPPORT          0
@@ -1169,6 +1169,48 @@
     #define MY92XX_DCKI_PIN     15
     #define MY92XX_COMMAND      MY92XX_COMMAND_DEFAULT
     #define MY92XX_MAPPING      0, 1, 2, 3
+
+// -----------------------------------------------------------------------------
+// Feit Electric Smart WiFi Bulb
+// -----------------------------------------------------------------------------
+
+#elif defined(FEIT_ELECTRIC_SMART_LIGHT)
+
+    // Info
+    #define MANUFACTURER        "FEIT_ELECTRIC"
+    #define DEVICE              "SMART_BULB"
+    #define RELAY_PROVIDER      RELAY_PROVIDER_LIGHT
+    #define LIGHT_PROVIDER      LIGHT_PROVIDER_DIMMER
+
+    // Light
+    #define LIGHT_CHANNELS      2
+    #define LIGHT_CH1_PIN       12  // Warm
+    #define LIGHT_CH2_PIN       5   // Cold
+    #define LIGHT_CH1_INVERSE   0
+    #define LIGHT_CH2_INVERSE   0
+
+// -----------------------------------------------------------------------------
+// Halloween Cauldrons
+// -----------------------------------------------------------------------------
+
+#elif defined(HALLOWEEN_CAULDRONS)
+
+    // Info
+    #define MANUFACTURER        "CALCPROGRAMMER1"
+    #define DEVICE              "HALLOWEEN_CAULDRONS"
+    #define RELAY_PROVIDER      RELAY_PROVIDER_LIGHT
+    #define LIGHT_PROVIDER      LIGHT_PROVIDER_DIMMER
+
+    // Light
+    #define LIGHT_CHANNELS      4
+    #define LIGHT_CH1_PIN       0   // Red
+    #define LIGHT_CH2_PIN       1   // Green
+    #define LIGHT_CH3_PIN       2   // Blue
+    #define LIGHT_CH4_PIN       3   // Fan
+    #define LIGHT_CH1_INVERSE   0
+    #define LIGHT_CH2_INVERSE   0
+    #define LIGHT_CH3_INVERSE   0
+    #define LIGHT_CH4_INVERSE   0
 
 // -----------------------------------------------------------------------------
 // Lyasi LED

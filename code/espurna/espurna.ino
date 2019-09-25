@@ -229,7 +229,8 @@ void setup() {
         displaySetup();
     #endif
 
-
+    E131Setup();
+    
     // 3rd party code hook
     #if USE_EXTRA
         extraSetup();

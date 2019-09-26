@@ -1,6 +1,8 @@
 #ifndef _E131_H
 #define _E131_H
 
+using e131_callback_f = std::function<void(unsigned char)>;
+
 //------------------------------------------------------------
 //* Plugin public interface
 //------------------------------------------------------------

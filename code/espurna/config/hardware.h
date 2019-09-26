@@ -43,20 +43,20 @@
     #define DEVICE                  "ESPURNA_CORE"
 
     // Disable non-core modules
-    #define ALEXA_SUPPORT           1
+    #define ALEXA_SUPPORT           0
     #define API_SUPPORT             1
-    #define BROKER_SUPPORT          1
-    #define DOMOTICZ_SUPPORT        1
+    #define BROKER_SUPPORT          0
+    #define DOMOTICZ_SUPPORT        0
     #define DEBUG_SERIAL_SUPPORT    0
-    #define DEBUG_TELNET_SUPPORT    1
-    #define DEBUG_WEB_SUPPORT       1
-    #define HOMEASSISTANT_SUPPORT   1
+    #define DEBUG_TELNET_SUPPORT    0
+    #define DEBUG_WEB_SUPPORT       0
+    #define HOMEASSISTANT_SUPPORT   0
     #define I2C_SUPPORT             0
-    #define MQTT_SUPPORT            1
-    #define NTP_SUPPORT             1
-    #define SCHEDULER_SUPPORT       1
+    #define MQTT_SUPPORT            0
+    #define NTP_SUPPORT             0
+    #define SCHEDULER_SUPPORT       0
     #define SENSOR_SUPPORT          0
-    #define THINGSPEAK_SUPPORT      1
+    #define THINGSPEAK_SUPPORT      0
     #define WEB_SUPPORT             1
 
     // Extra light-weight image
@@ -1181,6 +1181,7 @@
     #define DEVICE              "SMART_BULB"
     #define RELAY_PROVIDER      RELAY_PROVIDER_LIGHT
     #define LIGHT_PROVIDER      LIGHT_PROVIDER_DIMMER
+    #define DUMMY_RELAY_COUNT   1
 
     // Light
     #define LIGHT_CHANNELS      2
@@ -1200,13 +1201,14 @@
     #define DEVICE              "HALLOWEEN_CAULDRONS"
     #define RELAY_PROVIDER      RELAY_PROVIDER_LIGHT
     #define LIGHT_PROVIDER      LIGHT_PROVIDER_DIMMER
+    #define DUMMY_RELAY_COUNT   1
 
     // Light
     #define LIGHT_CHANNELS      4
-    #define LIGHT_CH1_PIN       0   // Red
-    #define LIGHT_CH2_PIN       1   // Green
-    #define LIGHT_CH3_PIN       2   // Blue
-    #define LIGHT_CH4_PIN       3   // Fan
+    #define LIGHT_CH1_PIN       1   // Red
+    #define LIGHT_CH2_PIN       3   // Green
+    #define LIGHT_CH3_PIN       0   // Blue
+    #define LIGHT_CH4_PIN       2   // Fan
     #define LIGHT_CH1_INVERSE   0
     #define LIGHT_CH2_INVERSE   0
     #define LIGHT_CH3_INVERSE   0

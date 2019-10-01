@@ -57,19 +57,19 @@ void _e131WebSocketOnData(JsonObject& root) {
 }
 
 void _e131WebSocketOnConnected(JsonObject& root) {
-    root["e131Enabled"]         = getSetting("e131Enabled",       0);
-    root["e131Multicast"]       = getSetting("e131Multicast",     0);
-    root["e131Universe"]        = getSetting("e131Universe",      1);
-    root["e131Light0Enabled"]   = getSetting("e131Light0Enabled", 0);
-    root["e131Light0Channel"]   = getSetting("e131Light0Channel", 1);
-    root["e131Light1Enabled"]   = getSetting("e131Light1Enabled", 0);
-    root["e131Light1Channel"]   = getSetting("e131Light1Channel", 2);
-    root["e131Light2Enabled"]   = getSetting("e131Light2Enabled", 0);
-    root["e131Light2Channel"]   = getSetting("e131Light2Channel", 3);
-    root["e131Light3Enabled"]   = getSetting("e131Light3Enabled", 0);
-    root["e131Light3Channel"]   = getSetting("e131Light3Channel", 4);
-    root["e131Light4Enabled"]   = getSetting("e131Light4Enabled", 0);
-    root["e131Light4Channel"]   = getSetting("e131Light4Channel", 5);
+    root["e131Enabled"]         = getSetting("e131Enabled",       0).toInt() == 1;
+    root["e131Multicast"]       = getSetting("e131Multicast",     0).toInt() == 1;
+    root["e131Universe"]        = getSetting("e131Universe",      1).toInt();
+    root["e131Light0Enabled"]   = getSetting("e131Light0Enabled", 0).toInt() == 1;
+    root["e131Light0Channel"]   = getSetting("e131Light0Channel", 1).toInt();
+    root["e131Light1Enabled"]   = getSetting("e131Light1Enabled", 0).toInt() == 1;
+    root["e131Light1Channel"]   = getSetting("e131Light1Channel", 2).toInt();
+    root["e131Light2Enabled"]   = getSetting("e131Light2Enabled", 0).toInt() == 1;
+    root["e131Light2Channel"]   = getSetting("e131Light2Channel", 3).toInt();
+    root["e131Light3Enabled"]   = getSetting("e131Light3Enabled", 0).toInt() == 1;
+    root["e131Light3Channel"]   = getSetting("e131Light3Channel", 4).toInt();
+    root["e131Light4Enabled"]   = getSetting("e131Light4Enabled", 0).toInt() == 1;
+    root["e131Light4Channel"]   = getSetting("e131Light4Channel", 5).toInt();
 }
 
 #endif
